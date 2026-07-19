@@ -12,7 +12,7 @@
 
 Every morning, millions of people ask the same three questions: *Will it rain today? Is the air safe to breathe? Should I carry an umbrella or sunscreen?* Usually, answering that means bouncing between a weather app, a pollution tracker, and a news alert — three tabs for one decision.
 
-This project set out to close that gap. Built in **Power BI**, the dashboard brings together **live weather conditions, a 7-day forecast, air quality readings, and rain probability** into a single, story-driven view — for **six major cities across Bangladesh**: Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur. It leverages live data from [WeatherAPI](https://www.weatherapi.com/) to deliver actionable insights into:  
+This project set out to close that gap. Built in **Power BI**, the dashboard brings together **live weather conditions, a 7-day forecast, air quality readings, and rain probability** into a single, story-driven view — for **six major cities across Bangladesh**: Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur. Here real-time data is used from [WeatherAPI](https://www.weatherapi.com/) to deliver actionable insights into:  
 - **Current weather metrics**: temperature, humidity, wind speed, UV index, visibility, and atmospheric pressure.  
 - **7-day forecast trends**: dynamically displayed starting from the next day relative to the current date.  
 - **Sun cycle information**: sunrise and sunset timings for local planning.  
