@@ -10,27 +10,18 @@
 ---
 
 
-## 💡 The Story Behind This Dashboard
+## 📌 The Story Behind This Dashboard
 
 Every morning, millions of people ask the same three questions: *Will it rain today? Is the air safe to breathe? Should I carry an umbrella or sunscreen?* Usually, answering that means bouncing between a weather app, a pollution tracker, and a news alert — three tabs for one decision.
 
-This project set out to close that gap. Built in **Power BI**, the dashboard brings together **live weather conditions, a 7-day forecast, air quality readings, and rain probability** into a single, story-driven view — for **six major cities across Bangladesh**: Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur.
-
-The goal wasn't just to display numbers. It was to turn raw meteorological and pollutant data into a narrative anyone can read in seconds — a forecast that tells you not just *what* the weather will be, but *what to do about it*.
-
----
-
-## 📌 Project Overview
-The **Bangladesh Weather & Air Quality Dashboard** is an interactive, real-time visualization tool developed in **Power BI**, providing comprehensive weather and pollution monitoring for six major Bangladeshi cities: **Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur**.  
-
-It leverages live data from [WeatherAPI](https://www.weatherapi.com/) to deliver actionable insights into:  
+This project set out to close that gap. Built in **Power BI**, the dashboard brings together **live weather conditions, a 7-day forecast, air quality readings, and rain probability** into a single, story-driven view — for **six major cities across Bangladesh**: Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur. It leverages live data from [WeatherAPI](https://www.weatherapi.com/) to deliver actionable insights into:  
 - **Current weather metrics**: temperature, humidity, wind speed, UV index, visibility, and atmospheric pressure.  
 - **7-day forecast trends**: dynamically displayed starting from the next day relative to the current date.  
 - **Sun cycle information**: sunrise and sunset timings for local planning.  
 - **Precipitation probabilities**: rain forecast across cities.  
 - **Air Quality Index (AQI)**: includes PM2.5, PM10, CO, NO₂, SO₂, and O₃ with dynamic color coding.  
 
-The dashboard empowers city planners, environmental authorities, and general users to make **data-driven decisions**, monitor **air quality trends**, and plan daily activities with accurate weather information.
+The goal wasn't just to display numbers. It was to turn raw meteorological and pollutant data into a narrative anyone can read in seconds — a forecast that tells you not just *what* the weather will be, but *what to do about it*.
 
 ---
 
