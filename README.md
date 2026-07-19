@@ -10,7 +10,7 @@
 ---
 
 
-## 📌 The Story Behind This Dashboard
+## 💡 The Story Behind This Dashboard
 
 Every morning, millions of people ask the same three questions: *Will it rain today? Is the air safe to breathe? Should I carry an umbrella or sunscreen?* Usually, answering that means bouncing between a weather app, a pollution tracker, and a news alert — three tabs for one decision.
 
