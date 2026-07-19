@@ -65,7 +65,7 @@ The goal wasn't just to display numbers. It was to turn raw meteorological and p
 
 ## 📷 Dashboard Snapshot
 
-![Dashboard Overview](Assets/Weather_AirQuality_Dashboard.png)
+![Dashboard Overview](Assets/Dashboard.png)
 
 ---
 
