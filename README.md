@@ -3,9 +3,7 @@
 ### *One glance. Six cities. Every condition that matters.*
 
 
-🌤 Bangladesh Weather & Air Quality Dashboard
-
-🔗 **[Live Dashboard Link](https://app.powerbi.com/links/nqrilG-n5C?ctid=72a00c12-baf3-47eb-963b-273fb99e18ae&pbi_source=linkShare)**
+🔗 **[🌤 Bangladesh Weather & Air Quality Dashboard](https://app.powerbi.com/links/nqrilG-n5C?ctid=72a00c12-baf3-47eb-963b-273fb99e18ae&pbi_source=linkShare)**
 
 ---
 
