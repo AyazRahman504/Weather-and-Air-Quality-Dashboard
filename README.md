@@ -23,43 +23,75 @@ The goal wasn't just to display numbers. It was to turn raw meteorological and p
 
 ---
 
-## 🛠 Methodology
+## 🛠 Development Process
 
 ### 1. Data Acquisition
-- Connected to WeatherAPI endpoints for **current weather**, **7-day forecast**, and **air quality metrics**.  
-- Retrieved **JSON-formatted live data**, compatible with Power BI and other programming environments.
+- Integrated **WeatherAPI** to retrieve real-time weather information, 7-day forecasts, and air quality data for selected cities in Bangladesh.
+- Extracted live data in **JSON format** and connected it directly to Power BI for automated data visualization and analysis.
+- Collected key parameters including temperature, humidity, wind conditions, precipitation probability, sunrise/sunset timings, and air pollutant levels.
+
+---
 
 ### 2. Data Transformation
-- Flattened nested JSON structures using Power Query Editor.  
-- Standardized column types for numeric, date/time, and textual values.  
-- Removed duplicates and redundant columns to optimize data structure.  
-- Generated separate tables for **Current Data**, **Forecast Data**, **Forecast Hours**, and **Air Quality**.  
-- Created a **master table** to consolidate city-wise data, allowing easy expansion for future cities.
+- Processed and cleaned raw API responses using **Power Query Editor**.
+- Expanded nested JSON structures into structured tables suitable for analysis.
+- Standardized data formats for numerical values, timestamps, and categorical fields to ensure consistency.
+- Removed unnecessary columns and duplicate records to improve data quality and model efficiency.
+- Organized the dataset into separate tables:
+  - **Current Weather Data** – real-time weather conditions
+  - **Forecast Data** – daily weather predictions
+  - **Hourly Forecast Data** – detailed hourly conditions
+  - **Air Quality Data** – pollutant measurements
+- Developed a consolidated master structure to simplify city-wise analysis and allow future expansion to additional locations.
+
+---
 
 ### 3. Data Modeling
-- Created **Locations** dimension table and established relationships with all weather and forecast tables.  
-- Configured filter propagation so selecting a city dynamically updates **current, forecast, and air quality data**.  
-- Hidden intermediate tables to reduce clutter while retaining proper model functionality.
+- Created a dedicated **Locations dimension table** to manage city selections across the dashboard.
+- Established relationships between location, weather, forecast, and air quality tables to ensure accurate data filtering.
+- Designed the data model so that selecting a city automatically updates all related visuals, including current conditions, forecasts, and pollution levels.
+- Hidden supporting tables and intermediate queries to maintain a cleaner and more user-friendly Power BI model.
+
+---
 
 ### 4. Dashboard Design & Visualization
-- Applied a **dark, glossy theme** for modern aesthetics.  
-- Implemented **KPI cards** for temperature, wind speed, humidity, visibility, UV index, and AQI.  
-- Created **line charts** for 7-day temperature forecasts with smooth gradients.  
-- Designed **gauge and donut charts** for pollutant AQI components with dynamic color indicators.  
-- Constructed **horizontal bar charts** for rain probability visualization.  
-- Integrated icons for weather conditions, rain, visibility, sunrise, and sunset.
+- Developed a modern **dark-themed dashboard interface** to improve readability and create a visually engaging user experience.
+- Designed KPI cards to display key weather indicators:
+  - Temperature
+  - Humidity
+  - Wind speed
+  - Visibility
+  - UV index
+  - Air Quality Index
+- Created interactive visualizations including:
+  - **Line chart:** 7-day temperature forecast trends
+  - **Bar chart:** Rain probability forecast
+  - **Gauge/indicator charts:** Air quality monitoring
+  - **Cards:** Sunrise and sunset information
+- Added weather-related icons and visual elements to improve user understanding and make the dashboard more intuitive.
+
+---
 
 ### 5. Dynamic Measures & DAX Implementation
-- Created **DAX measures** for conditional formatting, e.g., AQI color coding for CO, PM2.5, PM10.  
-- Generated **current and forecast temperature measures** with unit formatting (°C).  
-- Built **left/right rain probability measures** to visualize the chance of precipitation out of 100%.  
-- Configured **dynamic indicators** for pollutant thresholds (red for high, green for safe) to enhance visual comprehension.
+- Developed custom **DAX measures** to enhance dashboard functionality and automate calculations.
+- Implemented dynamic color indicators to classify pollutant levels based on air quality thresholds:
+  - Green → Good air quality
+  - Yellow → Moderate
+  - Orange/Red → Higher pollution levels
+- Created calculated measures for:
+  - Current temperature display with units (°C)
+  - Forecast temperature trends
+  - Rain probability percentages
+  - Pollutant concentration indicators (CO, PM2.5, PM10, NO₂, SO₂, O₃)
+- Applied conditional formatting to allow users to quickly identify environmental conditions.
 
-### 6. Interactivity & Usability
-- Added **city selection slicers** for user-friendly filtering.  
-- Configured **day-of-week labels** for forecast visualization to update automatically with live data.  
-- Implemented **auto-refresh** through Power BI Service to maintain real-time weather accuracy across all cities.
+---
 
+### 6. Interactivity & User Experience
+- Added city selection controls to allow users to switch between different locations dynamically.
+- Designed forecast labels to automatically adjust based on the current date, ensuring the dashboard always displays the upcoming 7-day forecast.
+- Published the dashboard through **Power BI Service** with scheduled refresh capability to maintain updated weather information from the live API source.
+- Optimized the overall layout and navigation to provide a simple and intuitive user experience.
 
 ---
 
