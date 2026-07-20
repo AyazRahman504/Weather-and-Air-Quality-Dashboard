@@ -24,9 +24,7 @@ Every day, people make decisions based on weather and environmental conditions:
 
 However, obtaining these answers often requires checking multiple platforms for weather forecasts, pollution levels, and environmental updates.
 
-This project aims to simplify that process by developing an **interactive Weather and Air Quality Monitoring Dashboard using Microsoft Power BI**, combining real-time meteorological and environmental information into a single, user-friendly platform.
-
-The dashboard integrates live data from **[WeatherAPI](https://www.weatherapi.com/)** to provide comprehensive weather and air quality insights across six major cities in Bangladesh: Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur.
+This project aims to simplify that process by developing an **interactive Weather and Air Quality Monitoring Dashboard using Microsoft Power BI**, combining real-time meteorological and environmental information into a single, user-friendly platform. The dashboard integrates live data from **[WeatherAPI](https://www.weatherapi.com/)** to provide comprehensive weather and air quality insights across six major cities in Bangladesh: Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur.
 
 The objective of this dashboard is not only to display weather statistics, but to transform raw API data into meaningful insights that users can understand quickly.
 
