@@ -310,24 +310,6 @@ These measures allow the dashboard to automatically classify pollutant levels an
 | Data Format | JSON |
 | Deployment | Power BI Service |
 
----
-
-# 📂 Repository Structure
-
-```
-Weather-and-Air-Quality-Dashboard
-
-│
-├── Assets
-│   └── Dashboard_Final.png
-│
-├── Dashboard
-│   └── Weather_Dashboard.pbix
-│
-├── README.md
-│
-└── Documentation
-```
 
 ---
 
