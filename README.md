@@ -2,104 +2,362 @@
 
 ### *One glance. Six cities. Every condition that matters.*
 
+<p align="center">
 
-🔗 **[🌤 Bangladesh Weather & Air Quality Dashboard](https://app.powerbi.com/links/nqrilG-n5C?ctid=72a00c12-baf3-47eb-963b-273fb99e18ae&pbi_source=linkShare)**
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?style=for-the-badge&logo=powerbi)]()
+[![Weather API](https://img.shields.io/badge/API-WeatherAPI-blue?style=for-the-badge)]()
+[![Data](https://img.shields.io/badge/Data-Real--Time-green?style=for-the-badge)]()
 
----
+</p>
 
-
-## 📌 The Story Behind This Dashboard
-
-Every morning, millions of people ask the same three questions: *Will it rain today? Is the air safe to breathe? Should I carry an umbrella or sunscreen?* Usually, answering that means bouncing between a weather app, a pollution tracker, and a news alert — three tabs for one decision.
-
-This project set out to close that gap. Built in **Power BI**, the dashboard brings together **live weather conditions, a 7-day forecast, air quality readings, and rain probability** into a single, story-driven view — for **six major cities across Bangladesh**: Dhaka, Chittagong, Rajshahi, Barisal, Khulna, and Rangpur. Here real-time data is used from [WeatherAPI](https://www.weatherapi.com/) to deliver actionable insights into:  
-- **Current weather metrics**: temperature, humidity, wind speed, UV index, visibility, and atmospheric pressure.  
-- **7-day forecast trends**: dynamically displayed starting from the next day relative to the current date.  
-- **Sun cycle information**: sunrise and sunset timings for local planning.  
-- **Precipitation probabilities**: rain forecast across cities.  
-- **Air Quality Index (AQI)**: includes PM2.5, PM10, CO, NO₂, SO₂, and O₃ with dynamic color coding.  
-
-The goal wasn't just to display numbers. It was to turn raw meteorological and pollutant data into a narrative anyone can read in seconds — a forecast that tells you not just *what* the weather will be, but *what to do about it*.
+🔗 **[🌤 View Live Dashboard](https://app.powerbi.com/links/nqrilG-n5C?ctid=72a00c12-baf3-47eb-963b-273fb99e18ae&pbi_source=linkShare)**
 
 ---
 
-## 🛠 Development Process
+# 📌 Project Overview & Motivation
 
-### 1. Data Acquisition
-- Integrated **WeatherAPI** to retrieve real-time weather information, 7-day forecasts, and air quality data for selected cities in Bangladesh.
-- Extracted live data in **JSON format** and connected it directly to Power BI for automated data visualization and analysis.
-- Collected key parameters including temperature, humidity, wind conditions, precipitation probability, sunrise/sunset timings, and air pollutant levels.
+Every day, people make decisions based on weather and environmental conditions:
 
----
+*"Will it rain today?"*  
+*"Is the air quality safe?"*  
+*"Should I plan outdoor activities?"*
 
-### 2. Data Transformation
-- Processed and cleaned raw API responses using **Power Query Editor**.
-- Expanded nested JSON structures into structured tables suitable for analysis.
-- Standardized data formats for numerical values, timestamps, and categorical fields to ensure consistency.
-- Removed unnecessary columns and duplicate records to improve data quality and model efficiency.
-- Organized the dataset into separate tables:
-  - **Current Weather Data** – real-time weather conditions
-  - **Forecast Data** – daily weather predictions
-  - **Hourly Forecast Data** – detailed hourly conditions
-  - **Air Quality Data** – pollutant measurements
-- Developed a consolidated master structure to simplify city-wise analysis and allow future expansion to additional locations.
+However, obtaining these answers often requires checking multiple platforms for weather forecasts, pollution levels, and environmental updates.
 
----
+This project aims to simplify that process by developing an **interactive Weather and Air Quality Monitoring Dashboard using Microsoft Power BI**, combining real-time meteorological and environmental information into a single, user-friendly platform.
 
-### 3. Data Modeling
-- Created a dedicated **Locations dimension table** to manage city selections across the dashboard.
-- Established relationships between location, weather, forecast, and air quality tables to ensure accurate data filtering.
-- Designed the data model so that selecting a city automatically updates all related visuals, including current conditions, forecasts, and pollution levels.
-- Hidden supporting tables and intermediate queries to maintain a cleaner and more user-friendly Power BI model.
+The dashboard integrates live data from **[WeatherAPI](https://www.weatherapi.com/)** to provide comprehensive weather and air quality insights across six major cities in Bangladesh:
 
----
+- 🇧🇩 Dhaka
+- 🇧🇩 Chittagong
+- 🇧🇩 Rajshahi
+- 🇧🇩 Barisal
+- 🇧🇩 Khulna
+- 🇧🇩 Rangpur
 
-### 4. Dashboard Design & Visualization
-- Developed a modern **dark-themed dashboard interface** to improve readability and create a visually engaging user experience.
-- Designed KPI cards to display key weather indicators:
-  - Temperature
-  - Humidity
-  - Wind speed
-  - Visibility
-  - UV index
-  - Air Quality Index
-- Created interactive visualizations including:
-  - **Line chart:** 7-day temperature forecast trends
-  - **Bar chart:** Rain probability forecast
-  - **Gauge/indicator charts:** Air quality monitoring
-  - **Cards:** Sunrise and sunset information
-- Added weather-related icons and visual elements to improve user understanding and make the dashboard more intuitive.
+The objective of this dashboard is not only to display weather statistics, but to transform raw API data into meaningful insights that users can understand quickly.
 
----
+The dashboard provides:
 
-### 5. Dynamic Measures & DAX Implementation
-- Developed custom **DAX measures** to enhance dashboard functionality and automate calculations.
-- Implemented dynamic color indicators to classify pollutant levels based on air quality thresholds:
-  - Green → Good air quality
-  - Yellow → Moderate
-  - Orange/Red → Higher pollution levels
-- Created calculated measures for:
-  - Current temperature display with units (°C)
-  - Forecast temperature trends
-  - Rain probability percentages
-  - Pollutant concentration indicators (CO, PM2.5, PM10, NO₂, SO₂, O₃)
-- Applied conditional formatting to allow users to quickly identify environmental conditions.
+- 🌡 **Current Weather Conditions**  
+  Temperature, humidity, wind speed, UV index, visibility, and atmospheric pressure.
+
+- 📅 **7-Day Weather Forecast**  
+  Future temperature trends dynamically updated based on the current date.
+
+- 🌧 **Rain Forecast**  
+  Daily precipitation probability to support outdoor planning.
+
+- 🌅 **Sun Cycle Information**  
+  Sunrise and sunset timings for each selected city.
+
+- 🌫 **Air Quality Monitoring**  
+  Analysis of major pollutants including:
+  - PM2.5
+  - PM10
+  - CO
+  - NO₂
+  - SO₂
+  - O₃
+
+The goal was to transform complex environmental data into an intuitive dashboard that communicates not only **what the conditions are**, but also **what actions users can take**.
 
 ---
 
-### 6. Interactivity & User Experience
-- Added city selection controls to allow users to switch between different locations dynamically.
-- Designed forecast labels to automatically adjust based on the current date, ensuring the dashboard always displays the upcoming 7-day forecast.
-- Published the dashboard through **Power BI Service** with scheduled refresh capability to maintain updated weather information from the live API source.
-- Optimized the overall layout and navigation to provide a simple and intuitive user experience.
+# ✨ Key Features
+
+| Feature | Description |
+|---|---|
+| 🌡 Current Weather Monitoring | Displays real-time temperature, humidity, wind speed, UV index, visibility, and pressure |
+| 📅 7-Day Forecast | Provides upcoming temperature trends automatically updated from live API data |
+| 🌧 Rain Probability | Shows daily precipitation chances for future planning |
+| 🌅 Sun Cycle Tracking | Displays sunrise and sunset information |
+| 🌫 Air Quality Monitoring | Tracks PM2.5, PM10, CO, NO₂, SO₂, and O₃ levels |
+| 🏙 Multi-City Analysis | Allows comparison between six major cities in Bangladesh |
+| 🎨 Interactive Dashboard | Uses modern visual elements, icons, and conditional formatting for better interpretation |
 
 ---
 
-## 📷 Dashboard Snapshot
+# ⚙️ Development Process
+
+## 1. Data Acquisition
+
+The dashboard uses **WeatherAPI** as the primary data source to retrieve real-time meteorological and environmental information.
+
+The API provides:
+
+- Current weather conditions
+- 7-day forecast data
+- Hourly forecast information
+- Air quality measurements
+
+The data is retrieved in **JSON format** and directly integrated into Power BI for transformation, modelling, and visualization.
+
+Key parameters collected include:
+
+- Temperature
+- Humidity
+- Wind speed
+- Visibility
+- UV index
+- Atmospheric pressure
+- Rain probability
+- Sunrise and sunset timing
+- Air pollutant concentration
+
+---
+
+## 2. Data Transformation
+
+Raw API responses contain nested JSON structures that require preprocessing before analysis.
+
+Using **Power Query Editor**, the following transformations were performed:
+
+- Expanded nested JSON objects into structured tables.
+- Converted timestamps into readable date and time formats.
+- Standardized numerical, categorical, and date/time data types.
+- Removed unnecessary fields and redundant columns.
+- Cleaned and prepared the dataset for efficient analysis.
+
+The dataset was organized into separate analytical tables:
+
+| Table | Purpose |
+|-|-|
+| Current Weather Data | Stores real-time weather conditions |
+| Forecast Data | Contains daily weather predictions |
+| Hourly Forecast Data | Provides detailed hourly weather information |
+| Air Quality Data | Stores pollutant measurements |
+| Locations Table | Controls city-based filtering |
+
+A consolidated data structure was created to support efficient city-level analysis and allow future expansion to additional locations.
+
+---
+
+## 3. Data Modelling
+
+A structured data model was developed to ensure accurate filtering and efficient dashboard performance.
+
+Key modelling steps:
+
+- Created a dedicated **Locations dimension table**.
+- Established relationships between:
+  - Locations
+  - Current Weather Data
+  - Forecast Data
+  - Air Quality Data
+- Configured filter propagation so selecting a city automatically updates all dashboard visuals.
+- Hidden supporting tables and intermediate queries to maintain a cleaner Power BI model.
+
+### Data Flow Architecture
+
+```
+WeatherAPI
+     |
+     |
+ JSON Response
+     |
+     |
+Power Query
+(Data Cleaning & Transformation)
+     |
+     |
+Power BI Data Model
+(Current + Forecast + Air Quality Tables)
+     |
+     |
+Interactive Dashboard
+```
+
+---
+
+# 🎨 Dashboard Design & Visualization
+
+The dashboard was designed with a modern dark theme to improve readability and create a visually engaging user experience.
+
+## KPI Cards
+
+Key weather indicators displayed:
+
+- Current Temperature
+- Humidity
+- Wind Speed
+- Visibility
+- UV Index
+- Air Quality Index
+
+---
+
+## Forecast Visualization
+
+A temperature forecast line chart was developed to display:
+
+- Upcoming 7-day temperature trends
+- Automatic weekday adjustment based on current date
+- Clear comparison between forecasted temperatures
+
+---
+
+## Air Quality Analysis
+
+The dashboard monitors major pollutants:
+
+- PM2.5
+- PM10
+- CO
+- NO₂
+- SO₂
+- O₃
+
+Dynamic colour indicators were implemented:
+
+| Colour | Air Quality Level |
+|-|-|
+| 🟢 Green | Good |
+| 🟡 Yellow | Moderate |
+| 🟠 Orange | Unhealthy |
+| 🔴 Red | Hazardous |
+
+---
+
+## Rain Forecast Visualization
+
+A horizontal bar chart was created to display:
+
+- Daily rain probability
+- Upcoming precipitation trends
+- Weather planning insights
+
+---
+
+# 📐 DAX & Analytics Implementation
+
+Custom DAX measures were created to enhance dashboard functionality and improve user interpretation.
+
+## Temperature Display Measure
+
+```DAX
+Temperature =
+ROUND(
+    SELECTEDVALUE(Forecast[avgtemp_c]),
+    1
+) & " °C"
+```
+
+---
+
+## PM2.5 Dynamic Colour Measure
+
+```DAX
+PM25_Color =
+VAR Value =
+SELECTEDVALUE(AirQuality[pm2_5])
+
+RETURN
+
+SWITCH(
+    TRUE(),
+    Value <= 50, "#43d946",
+    Value <= 100, "#fff570",
+    Value <= 150, "#ff9800",
+    Value <= 200, "#d93343",
+    "#8b0000"
+)
+```
+
+These measures allow the dashboard to automatically classify pollutant levels and provide immediate visual feedback.
+
+---
+
+# 📊 Key Insights
+
+## 🌡 Weather Trends
+
+- Temperature patterns vary across different regions of Bangladesh.
+- Coastal regions such as Chittagong show different weather characteristics compared with northern regions such as Rangpur.
+- The 7-day forecast enables users to anticipate upcoming weather conditions.
+
+---
+
+## 🌫 Air Quality Monitoring
+
+- Pollutant measurements provide visibility into environmental conditions across different cities.
+- PM2.5 and CO act as important indicators for monitoring pollution severity.
+- The colour-based AQI classification allows users to quickly identify potential air quality concerns.
+
+---
+
+## 🌧 Weather Planning
+
+- Rain probability forecasting helps users plan outdoor activities.
+- Sunrise and sunset information provides additional context for daily scheduling.
+
+---
+
+# 📷 Dashboard Snapshot
 
 ![Dashboard Overview](Assets/Dashboard_Final.png)
 
 ---
 
-## 🔗 Tools Used
-`Power BI Desktop` • `Power Query` • `DAX` • Weather & Air Quality Data Sources
+# 🛠 Tools & Technologies
+
+| Category | Tools |
+|-|-|
+| Data Visualization | Microsoft Power BI |
+| Data Transformation | Power Query |
+| Analytics | DAX |
+| Data Source | WeatherAPI |
+| Data Format | JSON |
+| Deployment | Power BI Service |
+
+---
+
+# 📂 Repository Structure
+
+```
+Weather-and-Air-Quality-Dashboard
+
+│
+├── Assets
+│   └── Dashboard_Final.png
+│
+├── Dashboard
+│   └── Weather_Dashboard.pbix
+│
+├── README.md
+│
+└── Documentation
+```
+
+---
+
+# 🎯 Skills Demonstrated
+
+This project demonstrates practical experience in:
+
+- Real-time API integration
+- JSON data processing
+- Data cleaning and transformation
+- Power BI data modelling
+- DAX measure development
+- Dashboard storytelling
+- Interactive visualization design
+- Environmental data analytics
+
+---
+
+# 🔗 References
+
+- WeatherAPI Documentation  
+https://www.weatherapi.com/docs/
+
+- Microsoft Power BI Documentation  
+https://learn.microsoft.com/en-us/power-bi/
+
+---
+
+## 👨‍💻 Author
+
+**Ayaz Rahman**  
+
+Power BI | Data Analytics | Data Visualization
